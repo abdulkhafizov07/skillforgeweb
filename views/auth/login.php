@@ -33,7 +33,7 @@ $this->title = "Kirish - Skillforge";
             ],
         ]); ?>
 
-        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="abdulkhafizov07_skillforge_bot" data-size="large" data-auth-url="https://localhost:8080/auth/telegram" data-request-access="write"></script>
+        <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="abdulkhafizov07_skillforge_bot" data-size="large" data-auth-url="https://skillforge.abdulkhafizov.uz/auth/telegram" data-request-access="write"></script>
 
         <?php ActiveForm::end(); ?>
 

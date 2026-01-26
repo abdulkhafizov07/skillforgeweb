@@ -1,14 +1,18 @@
 <?php
 
 return [
-    'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic',
-    'username' => 'root',
-    'password' => '',
-    'charset' => 'utf8',
+    "class" => "yii\db\Connection",
+    "dsn" => sprintf(
+        "mysql:host=%s;dbname=%s",
+        getenv("SKILLFORGE_DB_HOST") ?: "localhost",
+        getenv("SKILLFORGE_DB_NAME") ?: "yii2basic",
+    ),
+    "username" => getenv("SKILLFORGE_DB_USER") ?: "root",
+    "password" => getenv("SKILLFORGE_DB_PASSWORD") ?: "",
+    "charset" => "utf8mb4", // more modern, supports emojis
 
-    // Schema cache options (for production environment)
-    //'enableSchemaCache' => true,
-    //'schemaCacheDuration' => 60,
-    //'schemaCache' => 'cache',
+    // Production optimization: enable schema caching
+    "enableSchemaCache" => getenv("SKILLFORGE_DEBUG") != "true",
+    "schemaCacheDuration" => 3600, // 1 hour
+    "schemaCache" => "cache",
 ];
