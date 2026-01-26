@@ -54,6 +54,17 @@ class AuthController extends Controller
     }
 
     /**
+     * Telegram action.
+     *
+     * @return Response|string
+     */
+
+    public function actionTelegram()
+    {
+        return $this->redirect("/");
+    }
+
+    /**
      * Login action.
      *
      * @return Response|string
@@ -65,15 +76,7 @@ class AuthController extends Controller
             return $this->goHome();
         }
 
-        $model = new LoginForm();
-
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-
-        return $this->render("login", [
-            "model" => $model,
-        ]);
+        return $this->render("login");
     }
 
     /**
