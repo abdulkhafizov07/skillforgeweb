@@ -1,0 +1,41 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 82px;
+    background-color: #ebf4dd;
+    padding: 0 16px;
+}
+
+.btn-menu {
+    --button-border-radius: 0px;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    transition: background-color 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    cursor: pointer;
+}
+
+.btn-menu:hover {
+    background-color: #90ab8b4a;
+}
+
+.btn-menu > .menu-line {
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: #0d4715;
+}

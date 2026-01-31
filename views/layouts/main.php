@@ -34,18 +34,13 @@ $this->registerLinkTag([
 <head>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head(); ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
 </head>
-<body class="d-flex flex-column h-100">
+<body>
 <?php $this->beginBody(); ?>
 
-<header id="header">
+<?= $this->render("navbar.php") ?>
 
-</header>
-
-<main id="main" class="flex-shrink-0" role="main">
+<main id="main" role="main">
     <?= $content ?>
 </main>
 

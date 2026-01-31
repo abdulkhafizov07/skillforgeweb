@@ -1,0 +1,35 @@
+:root {
+    --button-background-color: transparent;
+    --button-padding: 10px 18px;
+    --button-border-width: 0px;
+    --button-border-style: none;
+    --button-border-color: transparent;
+    --button-border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: var(--button-background-color);
+    padding: var(--button-padding);
+    border-width: var(--button-border-width);
+    border-style: var(--button-border-style);
+    border-color: var(--button-border-color);
+    border-radius: var(--button-border-radius);
+}
+
+.btn-normal {
+    --button-background-color: #eaefef;
+    --button-border-width: 2px;
+    --button-border-style: solid;
+    --button-border-color: #bfc9d1;
+}

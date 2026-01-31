@@ -2,4 +2,5 @@
 
 /** @var yii\web\View $this */
 
-$this->title = "Skillforge"; ?>
+$this->title = "Skillforge";
+?>
